@@ -14,7 +14,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={ e => {
+      <form className="App" onSubmit={ e => {
         e.preventDefault();
         console.log("Submitting form! ...Allegedly");
 
