@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: purple;
 }
 
 .App-logo {
@@ -16,6 +17,9 @@
 
 .App-intro {
   font-size: large;
+}
+h1,h2,h3,h4 {
+
 }
 
 @keyframes App-logo-spin {
