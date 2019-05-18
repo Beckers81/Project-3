@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-
-
-export default class Login extends Component {
+import "./register.css"
+export default class Register extends Component {
 
   state = {
-    username: '',
-    password: '',
+    firstName: "",
+    lastName: "",
+    username: "",
+    password: "",
   }
 
   handleInputChange = (name, value) => {
@@ -16,7 +16,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <form onSubmit={ e => {
+      <form className="register-form" onSubmit={ e => {
         e.preventDefault();
         console.log("Submitting form! ...Allegedly");
 
@@ -25,6 +25,17 @@ export default class Login extends Component {
           .catch(error => console.error(error));
 
       }}>
+     
+      <input
+          type="text"
+          name="firstName"
+          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+        />
+        <input
+          type="text"
+          name="lastName"
+          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+        />
         <input
           type="text"
           name="username"
