@@ -24,13 +24,13 @@ class App extends Component {
       </div>
     </Router>)
 
-    if (this.state.loggedIn) {
-      return <>User Logged In!</>
-    } else if (this.state.newUser) {
-      return <Register />
-    } else {
-      return <Login />
-    }
+    // if (this.state.loggedIn) {
+    //   return <>User Logged In!</>
+    // } else if (this.state.newUser) {
+    //   return <Register />
+    // } else {
+    //   return <Login />
+    // }
   }
 
 }
