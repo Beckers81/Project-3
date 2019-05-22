@@ -18,8 +18,22 @@
 .App-intro {
   font-size: large;
 }
-h1,h2,h3,h4 {
 
+body {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+h1 {
+  color: purple;
+  text-align: center;
+  font-family: cambria;
+  font-weight: bold;
+}
+
+p {
+  font-family: cambria;
+  font-size: 45px;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
