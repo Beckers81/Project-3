@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const PostSchema = new Schema({
+  title: {
+    type: String,
+  },
   post: {
     type: String,
   },
@@ -12,4 +15,5 @@ const UserSchema = new Schema({
   }
 });
 
-const User = mongoose.model('User', UserSchema);
+const Post = mongoose.model('Post', PostSchema);
+module.exports = Post;

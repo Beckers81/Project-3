@@ -11,28 +11,39 @@ class App extends Component {
 
   state = {
     loggedIn: false,
-    newUser:  false,
+    loggedInUser: null,
+  }
+
+  componentDidMount() {
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    if (user) {
+      this.setState({
+        loggedInUser: user,
+        loggedIn: true,
+      });
+    }
+
   }
 
   render() {
-  return (
-    <Router>
-      <div>
-        
-          <Route exact path="/" component={Homepage} />
-        
-      </div>
-    </Router>)
-
-    // if (this.state.loggedIn) {
-    //   return <>User Logged In!</>
-    // } else if (this.state.newUser) {
-    //   return <Register />
-    // } else {
-    //   return <Login />
-    // }
+    return (
+      <Router>
+        <div>
+          
+          <Route exact path="/" render={ props => (
+            <Homepage updateLoggedInUser={ user => {
+              sessionStorage.setItem('user', JSON.stringify(user));
+              this.setState({
+                loggedIn: true,
+                loggedInUser: user
+              });
+            }}/>
+          )} />
+          
+        </div>
+      </Router>
+    )
   }
-
 }
 
 export default App;

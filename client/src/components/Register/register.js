@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./register.css"
+import "./register.css";
+
 export default class Register extends Component {
 
   state = {
     firstName: "",
     lastName: "",
-    username: "",
+    email: "",
     password: "",
   }
 
@@ -16,36 +17,63 @@ export default class Register extends Component {
 
   render() {
     return (
-      <form className="register-form" onSubmit={ e => {
-        e.preventDefault();
-        console.log("Submitting form! ...Allegedly");
+      <form
+        className="register-form"
+        onSubmit={ e => {
+          e.preventDefault();
+          console.log("Submitting form! ...Allegedly");
 
-        axios.post('/api/users', { ...this.state })
-          .then(response => console.log(response.data))
-          .catch(error => console.error(error));
+          axios.post('/api/users', this.state)
+            .then(response =>{
+              console.log(response.data);
+              this.props.updateLoggedInUser(response.data);
+            })
+            .catch(error => console.error(error));
 
-      }}>
+        }}>
      
-      <input
-          type="text"
-          name="firstName"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
-        <input
-          type="text"
-          name="lastName"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
-        <input
-          type="text"
-          name="username"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
-        <input
-          type="password"
-          name="password"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input
+            type="text"
+            required
+            name="firstName"
+            id="firstName"
+            onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+          />
+        </div>
+
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            required
+            name="lastName"
+            id="lastName"
+            onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+          />
+        </div>
+
+        <div>
+          <input
+            type="email"
+            required
+            id="email"
+            name="email"
+            onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+          />
+        </div>
+
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            required
+            type="password"
+            name="password"
+            onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
+          />
+        </div>
 
         <button type="submit">Submit</button>
       </form>

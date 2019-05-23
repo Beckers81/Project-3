@@ -3,34 +3,37 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require('./routes');
-var graphqlHTTP = require('express-graphql');
+const logger = require('morgan');
 
-var {
-  buildSchema
-} = require('graphql');
+app.use(logger('combined'));
+// var graphqlHTTP = require('express-graphql');
+
+// var {
+//   buildSchema
+// } = require('graphql');
 
 // Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
+// var schema = buildSchema(`
+//   type Query {
+//     hello: String
+//   }
+// `);
 
 // The root provides a resolver function for each API endpoint
-var root = {
-  hello: () => {
-    return 'Hello world!';
-  },
-};
+// var root = {
+//   hello: () => {
+//     return 'Hello world!';
+//   },
+// };
 
 
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: root,
-  graphiql: true,
-}));
-app.listen(4000);
-console.log('Running a GraphQL API server at localhost:4000/graphql')
+// app.use('/graphql', graphqlHTTP({
+//   schema: schema,
+//   rootValue: root,
+//   graphiql: true,
+// }));
+// app.listen(4000);
+// console.log('Running a GraphQL API server at localhost:4000/graphql')
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -44,7 +47,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Define API routes here
-app.use('/api', routes);
+app.use('/', routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
@@ -55,3 +58,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+process.on('SIGINT', () => { console.log("Terminating application"); process.exit(); });
