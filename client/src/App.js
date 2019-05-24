@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 //pages
 import Homepage from './pages/home/homepage';
 
-
-
 import "./App.css";
 
 class App extends Component {
@@ -29,15 +27,17 @@ class App extends Component {
     return (
       <Router>
         <div>
-          
+
           <Route exact path="/" render={ props => (
-            <Homepage updateLoggedInUser={ user => {
-              sessionStorage.setItem('user', JSON.stringify(user));
-              this.setState({
-                loggedIn: true,
-                loggedInUser: user
-              });
-            }}/>
+            <Homepage
+              user={ this.state.loggedInUser }
+              updateLoggedInUser={ user => {
+                sessionStorage.setItem('user', JSON.stringify(user));
+                this.setState({
+                  loggedIn: true,
+                  loggedInUser: user
+                });
+              }}/>
           )} />
           
         </div>

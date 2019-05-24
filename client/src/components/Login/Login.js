@@ -1,41 +1,33 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
-export default class Login extends Component {
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-  state = {
-    username: '',
-    password: '',
-  }
+const Login = props => {
+  return (
+    <Modal isOpen={props.isOpen} toggle={props.toggleLogin}>
+      <ModalHeader toggle={props.toggleLogin}>Please Select An Option!</ModalHeader>
+        <ModalBody>
+            <input
+              value={ props.email }
+              type="text"
+              name="email"
+              onChange={ e => props.handleInputChange(e.target.name, e.target.value) }
+            />
+            <input
+              value={ props.password }
+              type="password"
+              name="password"
+              onChange={ e => props.handleInputChange(e.target.name, e.target.value) }
+            />
+        
+        </ModalBody>
 
-  handleInputChange = (name, value) => {
-    this.setState({ [name]: value });
-  }
-
-  render() {
-    return (
-      <form className="App" onSubmit={ e => {
-        e.preventDefault();
-        console.log("Submitting form! ...Allegedly");
-
-        axios.post('/api/users', { ...this.state })
-          .then(response => console.log(response.data))
-          .catch(error => console.error(error));
-
-      }}>
-        <input
-          type="text"
-          name="username"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
-        <input
-          type="password"
-          name="password"
-          onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
-        />
-
-        <button type="submit">Submit</button>
-      </form>
-    );
-  }
+        <ModalFooter>
+          <Button color="primary" type="submit">Do Something</Button>{' '}
+          <Button color="danger" onClick={props.toggleLogin}>Cancel</Button>
+        </ModalFooter>
+    </Modal>
+  );
 }
+
+export default Login;
