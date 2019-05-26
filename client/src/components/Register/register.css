@@ -2,3 +2,19 @@
   color:black;
   font-family: cambria;
 }
+div { 
+  text-align: center;
+  font-family: cambria;
+  font-weight: bold;
+}
+
+div.modal body { 
+  text-align: center;
+  font-family: cambria;
+  font-weight: bold;
+  position:center;
+}
+
+label { 
+  text-align: center;
+}

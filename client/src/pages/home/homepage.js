@@ -3,7 +3,7 @@ import React from 'react';
 import BlogPost from '../BlogPost/BlogPost';
 import Register from "../../components/Register/register";
 import Login from "../../components/Login/Login";
-import Nav from "../../components/navbar/Nav";
+// import Nav from "../../components/navbar/Nav";
 
 import { Button } from 'reactstrap';
 
@@ -84,8 +84,8 @@ class Homepage extends React.Component {
 
             </div>
             <p className="lead">
-              <Button color="secondary" size="lg" onClick={this.toggleLogin}>Login</Button>
-              <Button color="secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
             </p>
           </>
         }
