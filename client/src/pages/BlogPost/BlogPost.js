@@ -18,7 +18,9 @@ export default class BlogPost extends Component {
           name="body"
           value={ this.state.title }
         />
+
         <button>Submit</button>
+
     </form>
     )
   }

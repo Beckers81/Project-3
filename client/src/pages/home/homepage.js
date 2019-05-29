@@ -67,8 +67,10 @@ class Homepage extends React.Component {
             <div className="horizontal-center">
               <h1 className="display-3">Our Amazing App!</h1>
               <p className="lead">Interested in a Free Gift?</p>
-              <hr className="my-2" />
+              {/* <hr className="my-2" /> */}
               <p>Our Home Page is Fun and Inspirational.</p>
+
+
 
               <Register
                 isOpen={ this.state.registerModal }

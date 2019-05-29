@@ -8,12 +8,12 @@
   height: 80px;
 }
 
-.App-header {
+/* .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
+} */
 
 /* .App-intro {
   font-size: large;
@@ -63,7 +63,7 @@ p.lead {
   font-size: 35px;
 }
 
-modal {
+.modal {
   color: purple;
   text-align: center;
   font-family: cambria;
@@ -77,11 +77,11 @@ modal {
   font-weight: bold;
 }
 
-p {
+/* p {
   font-family: cambria;
   font-size: 45px;
   text-align: center;
-}
+} */
 
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

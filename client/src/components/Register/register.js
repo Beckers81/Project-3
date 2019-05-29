@@ -59,7 +59,7 @@ const Register = props => {
           </ModalBody>
 
           <ModalFooter>
-          <Button variant="outline-secondary" size="lg" onClick={ props.register }>Do Something</Button>{' '}
+          <Button variant="outline-secondary" size="lg" onClick={ props.register }>Create Account</Button>{' '}
 
             <Button variant="outline-secondary" size="lg" onClick={props.toggleRegister}>Cancel</Button>
           </ModalFooter>
