@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require('./routes');
 const logger = require('morgan');
+const bcrypt = require('bcrypt');
 
 app.use(logger('combined'));
 // var graphqlHTTP = require('express-graphql');

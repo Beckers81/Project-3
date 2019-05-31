@@ -1,9 +1,9 @@
 import React from 'react';
-
 import BlogPost from '../BlogPost/BlogPost';
 import Register from "../../components/Register/register";
 import Login from "../../components/Login/Login";
-import Nav from "../../components/navbar/Nav";
+
+
 
 import { Button } from 'reactstrap';
 
@@ -38,7 +38,7 @@ class Homepage extends React.Component {
 
   handleLoginInputChange = (name, value) => {
     const loginCreds = { ...this.state.loginCreds, [ name ]: value };
-    this.setState({ loginCreds: loginCreds });
+    this.setState({ loginCreds });
   }
 
   register = () => {
@@ -53,8 +53,11 @@ class Homepage extends React.Component {
 
   login = () => {
     console.log('logging in')
-    axios.post('/api/login', this.state)
-      .then(response => console.log(response.data))
+    axios.post('/api/users/login', this.state)
+      .then(response => {
+        console.log(response.data);
+        this.props.updateLoggedInUser(response.data);
+      })
       .catch(error => console.error(error));
   }
 
@@ -80,6 +83,7 @@ class Homepage extends React.Component {
                 isOpen={ this.state.loginModal }
                 toggleLogin={ this.toggleLogin }
                 handleInputChange={ this.handleLoginInputChange }
+                login={ this.login }
               />
 
             </div>
@@ -94,6 +98,7 @@ class Homepage extends React.Component {
           <BlogPost />
         }
       </div>
+      
     );
   } 
 };
