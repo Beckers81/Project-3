@@ -33,5 +33,11 @@ UserSchema.pre('save', function(next) {
     .catch(error => console.error('Something went wrong hashing the password! ', error));
 });
 
+UserSchema.methods.hasCorrectPassword = function(password, callback) {
+  bcrypt.compare(password, this.password, function(err, same) {
+    callback(err, same);
+  });
+};
+
 const User = mongoose.model('User', UserSchema);
 module.exports = User;

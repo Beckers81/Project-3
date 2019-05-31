@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./BlogPost.css";
 
 export default class BlogPost extends Component {
 
@@ -22,4 +23,7 @@ export default class BlogPost extends Component {
     </form>
     )
   }
-}
+};
+
+
+
