@@ -1,13 +1,12 @@
 import React from 'react';
-
+// import { Carousel } from 'reactstrap';
 import BlogPost from '../BlogPost/BlogPost';
 import Register from "../../components/Register/register";
 import Login from "../../components/Login/Login";
-// import Nav from "../../components/navbar/Nav";
-
 import { Button } from 'reactstrap';
 
 import axios from 'axios';
+
 
 class Homepage extends React.Component {
   state = {
@@ -65,12 +64,10 @@ class Homepage extends React.Component {
         { !this.props.user && 
           <>
             <div className="horizontal-center">
-              <h1 className="display-3">Our Amazing App!</h1>
+              <h1 className="display-3">Positive!</h1>
               <p className="lead">Interested in a Free Gift?</p>
               {/* <hr className="my-2" /> */}
               <p>Our Home Page is Fun and Inspirational.</p>
-
-
 
               <Register
                 isOpen={ this.state.registerModal }
@@ -86,8 +83,9 @@ class Homepage extends React.Component {
 
             </div>
             <p className="lead">
-            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>
-            <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>        <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <br></br><br></br><br></br>
+        {/* <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> */}
             </p>
           </>
         }
