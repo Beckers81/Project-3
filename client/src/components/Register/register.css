@@ -2,3 +2,28 @@
   color:black;
   font-family: cambria;
 }
+
+body {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+div { 
+  text-align: center;
+  font-family: cambria;
+  font-weight: bold;
+}
+
+div.modal body { 
+  /* text-align: center; */
+  font-family: cambria;
+  font-weight: bold;
+  position:center;
+}
+
+label { 
+  text-align: center;
+}
+.create {
+  text-align: center;
+  color:red;
+}

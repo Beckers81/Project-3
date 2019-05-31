@@ -6,7 +6,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const Login = props => {
   return (
     <Modal isOpen={props.isOpen} toggle={props.toggleLogin}>
-      <ModalHeader toggle={props.toggleLogin}>Please Select An Option!</ModalHeader>
+      <ModalHeader toggle={props.toggleLogin}>Please Log In Using Email and Password:</ModalHeader>
         <ModalBody>
           {/* <form> */}
             <input
@@ -28,8 +28,9 @@ const Login = props => {
         </ModalBody>
 
         <ModalFooter>
-          <Button color="primary" onClick={ props.login }>Login</Button>{' '}
-          <Button color="danger" onClick={props.toggleLogin}>Cancel</Button>
+        <Button variant="outline-secondary" size="lg" type="submit">Log In</Button>{' '}
+          
+          <Button variant="outline-secondary" size="lg"  onClick={props.toggleLogin}>Cancel</Button>
         </ModalFooter>
     </Modal>
   )

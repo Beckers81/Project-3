@@ -71,4 +71,8 @@
 //   </Formik>
 // );
 
+<<<<<<< HEAD
 // export default ValidatedLoginForm;
+=======
+// export default ValidatedLoginForm;
+>>>>>>> 936f126f894ad3aabf8ac475314e5080919e7e58

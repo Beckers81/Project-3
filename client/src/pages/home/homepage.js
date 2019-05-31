@@ -1,13 +1,12 @@
 import React from 'react';
+import Mycarousel from "../../components/Carouselwrapper/carouselwrapper"
 import BlogPost from '../BlogPost/BlogPost';
 import Register from "../../components/Register/register";
 import Login from "../../components/Login/Login";
-
-
-
 import { Button } from 'reactstrap';
 
 import axios from 'axios';
+
 
 class Homepage extends React.Component {
   state = {
@@ -38,7 +37,7 @@ class Homepage extends React.Component {
 
   handleLoginInputChange = (name, value) => {
     const loginCreds = { ...this.state.loginCreds, [ name ]: value };
-    this.setState({ loginCreds });
+    this.setState({ loginCreds: loginCreds });
   }
 
   register = () => {
@@ -53,11 +52,8 @@ class Homepage extends React.Component {
 
   login = () => {
     console.log('logging in')
-    axios.post('/api/users/login', this.state)
-      .then(response => {
-        console.log(response.data);
-        this.props.updateLoggedInUser(response.data);
-      })
+    axios.post('/api/login', this.state)
+      .then(response => console.log(response.data))
       .catch(error => console.error(error));
   }
 
@@ -68,10 +64,10 @@ class Homepage extends React.Component {
         { !this.props.user && 
           <>
             <div className="horizontal-center">
-              <h1 className="display-3">Our Amazing App!</h1>
-              <p className="lead">Interested in a Free Gift?</p>
-              <hr className="my-2" />
-              <p>Our Home Page is Fun and Inspirational.</p>
+              <h1 className="display-3">Positive!</h1>
+              <p className="lead">Thank you for checking out our positive blog!</p>
+              <p className="subtitle">
+              Our Home Page is Fun and Inspirational.</p>
 
               <Register
                 isOpen={ this.state.registerModal }
@@ -83,13 +79,15 @@ class Homepage extends React.Component {
                 isOpen={ this.state.loginModal }
                 toggleLogin={ this.toggleLogin }
                 handleInputChange={ this.handleLoginInputChange }
-                login={ this.login }
               />
 
             </div>
             <p className="lead">
-              <Button color="secondary" size="lg" onClick={this.toggleLogin}>Login</Button>
-              <Button color="secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>        
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <br></br>
+        {/* <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> */}
             </p>
           </>
         }
@@ -97,10 +95,15 @@ class Homepage extends React.Component {
         { this.props.user &&
           <BlogPost />
         }
+        <Mycarousel/>
       </div>
-      
     );
   } 
 };
 
 export default Homepage;
+
+
+
+
+

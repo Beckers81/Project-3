@@ -3,40 +3,91 @@
   background: purple;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 body {
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  /* background-image: url("./images/enjoytoday.jpg"); */
+  /* background-size: auto 100%; */
+  /* height: 100vh; */
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
 h1 {
   color: purple;
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  /* transform: rotateZ(-360deg); */
+}
+
+h5.modal-title {
+  color: purple;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 auto
+}
+
+p.lead {
+  text-align: center;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: purple;
+}
+
+.subtitle {
+  text-align: center;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: purple;
+}
+
+
+
+
+
+
+.modal {
+  color: purple;
+  text-align: center;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
 }
 
-p {
+.modalheader {
+  color: purple;
+  text-align: center;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+/* 
+.rotate {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+} */
+
+/* p {
   font-family: cambria;
   font-size: 45px;
   text-align: center;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */

@@ -9,7 +9,7 @@ const Register = props => {
     return (
      
         <Modal isOpen={props.isOpen} toggle={props.toggleRegister}>
-          <ModalHeader>Please Select An Option!</ModalHeader>
+          <ModalHeader>Please Enter Information Below:</ModalHeader>
           <ModalBody>
             
             <div>
@@ -58,9 +58,10 @@ const Register = props => {
 
           </ModalBody>
 
-          <ModalFooter>
-            <Button color="primary" onClick={ props.register }>Do Something</Button>{' '}
-            <Button color="danger" onClick={props.toggleRegister}>Cancel</Button>
+          <ModalFooter style={{float: "none"}}>
+          <Button className="create" variant="outline-secondary" size="lg" onClick={ props.register }>Create Account</Button>{' '}
+
+            <Button className="create" variant="outline-secondary" size="lg" onClick={props.toggleRegister}>Cancel</Button>
           </ModalFooter>
         </Modal>
     );
