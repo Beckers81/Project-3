@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "short_name": "Positve Blog App",
   "name": "Positive Blog",
   "icons": [
@@ -8,6 +9,11 @@
       "type": "image/jpg"
     }
   ],
+=======
+  "short_name": "React App",
+  "name": "Create React App Sample",
+
+>>>>>>> 936f126f894ad3aabf8ac475314e5080919e7e58
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

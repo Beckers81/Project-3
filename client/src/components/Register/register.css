@@ -23,3 +23,7 @@ div.modal body {
 label { 
   text-align: center;
 }
+.create {
+  text-align: center;
+  color:red;
+}

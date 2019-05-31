@@ -8,8 +8,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import ValidatedLoginForm from "./components/Validation/ValidatedLoginForm"
 
 
-
-
 ReactDOM.render(<App />, document.getElementById("root"));
 
 registerServiceWorker();

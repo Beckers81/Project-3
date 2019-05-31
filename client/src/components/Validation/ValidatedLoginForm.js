@@ -62,7 +62,7 @@
 //           {errors.password && touched.password && (
 //             <div className="input-feedback">{errors.password}</div>
 //           )}
-//           <button type="submit" disabled={isSubmitting}>
+//           <button type="submit">
 //             Login
 //           </button>
 //         </form>
@@ -71,4 +71,8 @@
 //   </Formik>
 // );
 
+<<<<<<< HEAD
 // export default ValidatedLoginForm;
+=======
+// export default ValidatedLoginForm;
+>>>>>>> 936f126f894ad3aabf8ac475314e5080919e7e58

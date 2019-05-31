@@ -16,18 +16,19 @@ body {
   min-height: 100%;
 }
 
-
 h1 {
   color: purple;
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   /* transform: rotateZ(-360deg); */
 }
 
 h5.modal-title {
   color: purple;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 35px;
   margin: 0 auto
@@ -35,25 +36,41 @@ h5.modal-title {
 
 p.lead {
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: purple;
+}
+
+.subtitle {
+  text-align: center;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 35px;
   color: purple;
 }
 
+
+
+
+
+
 .modal {
   color: purple;
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
 }
 
 .modalheader {
   color: purple;
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-
 }
 /* 
 .rotate {
