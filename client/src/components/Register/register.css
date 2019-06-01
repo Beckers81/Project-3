@@ -9,21 +9,22 @@ body {
 
 div { 
   text-align: center;
-  font-family: cambria;
+  /* font-family: cambria; */
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
 }
 
 div.modal body { 
   /* text-align: center; */
-  font-family: cambria;
+  font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   position:center;
 }
 
 label { 
   text-align: center;
+
 }
 .create {
   text-align: center;
-  color:red;
 }

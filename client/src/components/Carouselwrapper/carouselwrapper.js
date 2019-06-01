@@ -10,21 +10,45 @@ import {
 
 const items = [
   {
-    src: 'https://images.unsplash.com/photo-1495106245177-55dc6f43e83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    src: 'https://images.unsplash.com/photo-1554498808-d3ae8f23540c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    // altText: 'Slide 1',
+    // caption: 'Slide 1'
+  },
 
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+  {
+    src: 'https://images.unsplash.com/photo-1546430783-fe4b9c159e52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    // altText: 'Slide 2',
+    // caption: 'Slide 2'
   },
   {
-    src: 'https://images.unsplash.com/photo-1495106245177-55dc6f43e83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'https://images.unsplash.com/photo-1520436380237-51bb48b9305f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    // altText: 'Slide 3',
+    // caption: 'Code Happy'
   },
+
   {
-    src: 'https://images.unsplash.com/photo-1495106245177-55dc6f43e83f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: 'https://images.unsplash.com/photo-1556711905-b3f402e1ff80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    // altText: 'Slide 3',
+    // caption: 'Code Happy'
+  },
+
+  {
+    src: 'https://images.unsplash.com/photo-1556711905-b3f402e1ff80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    // altText: 'Slide 3',
+    // caption: 'Code Happy'
+  },
+
+  {
+    src: 'https://images.unsplash.com/photo-1556711905-b3f402e1ff80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+    // altText: 'Slide 3',
+    // caption: 'Code Happy'
   }
+
+
+
+
+
+
 ];
 
 class Mycarousel extends Component {

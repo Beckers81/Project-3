@@ -64,10 +64,10 @@ class Homepage extends React.Component {
         { !this.props.user && 
           <>
             <div className="horizontal-center">
-              <h1 className="display-3">Positive!</h1>
+              <h1 className="display-3">Be Positive!</h1>
               <p className="lead">Thank you for checking out our positive blog!</p>
               <p className="subtitle">
-              Our Home Page is Fun and Inspirational.</p>
+              We hope you find it Fun and Inspirational.</p>
 
               <Register
                 isOpen={ this.state.registerModal }
@@ -84,8 +84,7 @@ class Homepage extends React.Component {
             </div>
             <p className="lead">
 
-            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>        
-            <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>       <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
             <br></br>
         {/* <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> */}
             </p>
