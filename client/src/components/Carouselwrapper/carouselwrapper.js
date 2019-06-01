@@ -31,26 +31,10 @@ const items = [
     // altText: 'Slide 3',
     // caption: 'Code Happy'
   },
-
-  {
-    src: 'https://images.unsplash.com/photo-1556711905-b3f402e1ff80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    // altText: 'Slide 3',
-    // caption: 'Code Happy'
-  },
-
-  {
-    src: 'https://images.unsplash.com/photo-1556711905-b3f402e1ff80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    // altText: 'Slide 3',
-    // caption: 'Code Happy'
-  }
-
-
-
-
-
-
 ];
+  
 
+ 
 class Mycarousel extends Component {
   constructor(props) {
     super(props);

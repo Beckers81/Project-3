@@ -84,7 +84,8 @@ class Homepage extends React.Component {
             </div>
             <p className="lead">
 
-            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>       <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button>
+            <Button variant="outline-secondary" size="lg" onClick={this.toggleLogin}>Login</Button>       <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> 
+             {/* <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> */}
             <br></br>
         {/* <Button variant="outline-secondary" size="lg" onClick={this.toggleRegister}>Register</Button> */}
             </p>
@@ -101,7 +102,6 @@ class Homepage extends React.Component {
 };
 
 export default Homepage;
-
 
 
 
