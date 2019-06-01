@@ -28,7 +28,7 @@ const Login = props => {
         </ModalBody>
 
         <ModalFooter>
-        <Button variant="outline-secondary" size="lg" type="submit">Log In</Button>{' '}
+        <Button variant="outline-secondary" size="lg" type="submit" href="/blog">Log In</Button>{' '}   
           
           <Button variant="outline-secondary" size="lg"  onClick={props.toggleLogin}>Cancel</Button>
         </ModalFooter>

@@ -1,14 +1,11 @@
 h2 {
-color: purple;
-text-align: center;
-font-weight: bold;
-}
-
-.blogtextarea {
-    height: 750px;
-
-}
-
-.jumbotron {
-    color: rgb(81, 23, 81)
-}
+    color: purple;
+    text-align: center;
+    font-weight: bold;
+    }
+    .blogtextarea {
+        height: 750px;
+    }
+    jumbotron {
+        color: muted
+    }
