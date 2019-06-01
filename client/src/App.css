@@ -15,6 +15,39 @@ body {
   min-width: 100%;
   min-height: 100%;
 }
+.carousel {
+
+  height:50px;
+  
+  }
+  
+  .carousel-inner   {
+  height:350px;
+  object-fit: contain;
+  
+  }
+
+ .carousel {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  /* height:auto; */
+  object-fit: contain;
+  position:absolute; 
+  } 
+  
+   .carousel-inner > .item > img{
+    margin:auto;
+    margin:auto;
+    width:100%
+    } 
+
+     
+  
+    div.carousel div.item > img {
+      width: 100%;
+      height: auto;
+    } 
 
 h1 {
   color: purple;
@@ -51,8 +84,6 @@ p.lead {
   font-size: 35px;
   color: purple;
 }
-
-
 
 
 

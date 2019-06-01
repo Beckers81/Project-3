@@ -9,7 +9,7 @@ const Register = props => {
     return (
      
         <Modal isOpen={props.isOpen} toggle={props.toggleRegister}>
-          <ModalHeader>Please Enter Information Below:</ModalHeader>
+          <ModalHeader>Please Enter Your Information Below:</ModalHeader>
           <ModalBody>
             
             <div>
