@@ -9,6 +9,6 @@ font-weight: bold;
 
 }
 
-jumbotron {
-    color: muted
+.jumbotron {
+    color: rgb(81, 23, 81)
 }

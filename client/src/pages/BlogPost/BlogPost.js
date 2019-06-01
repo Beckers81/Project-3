@@ -17,7 +17,6 @@ export default class BlogPost extends Component {
     return (
       
 
-
       <Container>
       <Jumbotron>
       <h1>Please Feel Free to Share Some Positivity!</h1>
