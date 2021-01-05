@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.10.17",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bcrypt": "^3.0.6",
     "express": "^4.17.0",
     "express-graphql": "^0.8.0",
